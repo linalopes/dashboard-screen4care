@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Screen4Care</title>
+    <link rel="icon" type="image/png" href="screen4share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h2>Dashboard</h2>
+            <img src="logo.svg-fill.png" alt="Screen4Care Logo" style="height: 40px;">
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="hospital">Hospital Viewer</button>
+            <button class="tab-button" data-tab="patients">Patients Viewer</button>
+            <button class="tab-button" data-tab="group">Group Compatible</button>
+        </nav>
+
+        <main class="main-content">
+            <!-- Hospital Viewer Tab -->
+            <div class="tab-content active" id="hospital">
+                <div class="hospital-layout">
+                    <aside class="sidebar">
+                        <div class="sidebar-content">
+                            <!-- Sidebar content will be populated by sidebar.js -->
+                        </div>
+                    </aside>
+                    <div class="map-container">
+                        <div id="map" class="map-content">
+                            <!-- Map will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patients Viewer Tab -->
+            <div class="tab-content" id="patients">
+                <div class="placeholder">
+                    <h3>Patients Viewer</h3>
+                    <p>This tab will contain patient management functionality.</p>
+                </div>
+            </div>
+
+            <!-- Group Compatible Tab -->
+            <div class="tab-content" id="group">
+                <div class="placeholder">
+                    <h3>Group Compatible</h3>
+                    <p>This tab will contain group compatibility features.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
